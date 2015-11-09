@@ -1,0 +1,29 @@
+
+<p ng-show="smartphoneCount.chart.errorMessage">{{ smartphoneCount.chart.errorMessage }}</p>
+<div class='chart-wrapper'>
+  <div class="chart-title">Visitors Around The Store</div>
+  <div class='date-range'>
+    <div class='date-range-from'>
+      <label for="from-date">From:</label><input id="from-date" type="date" ng-model="smartphoneCount.fromDate" ng-change="smartphoneCount.changeDate(true)">
+    </div>
+    <div class='date-range-to'>
+      <label for="to-date">To:</label><input id="to-date" type="date" ng-model="smartphoneCount.toDate" ng-change="smartphoneCount.changeDate()">
+    </div>
+  </div>
+  <canvas ng-hide="smartphoneCount.chart.errorMessage"
+          id="smartphone-data-chart"
+          class="chart chart-line"
+          chart-data="smartphoneCount.chart.data"
+          chart-labels="smartphoneCount.chart.labels"
+          chart-series="smartphoneCount.chart.series"
+          height="900"
+          width="1200"
+          >
+  </canvas>
+  <chart-legend>
+    <ul class="line-legend">
+      <li><span class="outside"></span>{{smartphoneCount.chart.series[0]}}</li>
+      <li><span class="inside"></span>{{smartphoneCount.chart.series[1]}}</li>
+    </ul>
+  </chart-legend>
+</div>

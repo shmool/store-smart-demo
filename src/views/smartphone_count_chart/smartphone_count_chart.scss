@@ -1,0 +1,40 @@
+$outsideColor: #FF5252;
+$insideColor: #8A80FF;
+
+.chart-wrapper {
+
+  padding-top: 15px;
+  padding-left: 22px;
+  width: 55%;
+
+  .chart-title {
+    font-size: 45px;
+    font-weight: 300;
+    margin-left: 100px;
+  }
+
+  .date-range {
+    display: inline-flex;
+    padding-left: 10em;
+    padding-bottom: 1em;
+
+    label {
+      padding-right: 10px;
+    }
+
+    .date-range-to {
+      margin-left: 33px;
+    }
+  }
+
+  .line-legend {
+
+    .outside {
+      background-color: #FF5252;
+    }
+
+    .inside {
+      background-color:  #8A80FF;
+    }
+  }
+}
