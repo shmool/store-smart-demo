@@ -4,10 +4,10 @@
   <div class="chart-title">Visitors Around The Store</div>
   <div class='date-range'>
     <div class='date-range-from'>
-      <label for="from-date">From:</label><input id="from-date" type="date" ng-model="smartphoneCount.fromDate" ng-change="smartphoneCount.changeDate(true)">
+      <label for="from-date">From:</label><input id="from-date" type="date" ng-model="smartphoneCount.dates.fromDate" ng-change="smartphoneCount.changeDate(true)">
     </div>
     <div class='date-range-to'>
-      <label for="to-date">To:</label><input id="to-date" type="date" ng-model="smartphoneCount.toDate" ng-change="smartphoneCount.changeDate()">
+      <label for="to-date">To:</label><input id="to-date" type="date" ng-model="smartphoneCount.dates.toDate" ng-change="smartphoneCount.changeDate()">
     </div>
   </div>
   <canvas ng-hide="smartphoneCount.chart.errorMessage"
